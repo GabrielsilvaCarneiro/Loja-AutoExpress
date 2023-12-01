@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoExpress.com.br</title>
+    <link rel="stylesheet" href="AutoExpress.css">
+</head>
+<body>
+
+    <header id="header" class="header">
+        <div class="container">
+            <div class="logo">
+                <img class="img-logo" src="Img/logo-autoexpress.png" alt="">
+                <h1 class="auto">Auto</h1>
+                <h1 class="express">Express</h1>
+            </div>
+
+            <nav class="menu">
+                <a href="AutoExpress.html" class="item1">Início</a>
+                <a href="" class="item1">Sobre Nós</a>
+                <a href="LoginExpress.html" class="item1">Login</a>
+                <a href="Registrar-se.html" class="item1">Registrar-se</a>
+            </nav>
+
+            <div class="buscar">
+                <input type="text" id="buscar-input" placeholder="Pesquisa" oninput="buscarProduto()">
+          
+            </div>
+    
+                <div id="carrinho-icon" onclick="toggleCarrinho()" >
+                <img src="Img/basket.png" alt="" class="carrinho">
+            
+               
+                <span id="cont-carrinho"></span>
+            </div>
+
+            <div id="carrinho-itens" style="display: none;" >
+                <ul id="itens-lista"></ul>
+                <span id="preco-total">Total: R$0.00</span>
+
+                 <!-- COMPRAR -->
+                 <a href="LoginExpress.html">
+                 <button id="comprar">
+                    <span>COMPRAR
+                    </span>
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-miterlimit="2" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd"><path fill-rule="nonzero" d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 1.5c-4.69 0-8.497 3.807-8.497 8.497s3.807 8.498 8.497 8.498 8.498-3.808 8.498-8.498-3.808-8.497-8.498-8.497zm0 7.425 2.717-2.718c.146-.146.339-.219.531-.219.404 0 .75.325.75.75 0 .193-.073.384-.219.531l-2.717 2.717 2.727 2.728c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.384-.073-.53-.219l-2.729-2.728-2.728 2.728c-.146.146-.338.219-.53.219-.401 0-.751-.323-.751-.75 0-.192.073-.384.22-.531l2.728-2.728-2.722-2.722c-.146-.147-.219-.338-.219-.531 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"></path></svg>
+                    </span></button></a>
+
+                <button id="excluir" class="limpar" onclick="limparCarrinho()">
+                    <span>Excluir Produtos!
+                    </span>
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-miterlimit="2" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd"><path fill-rule="nonzero" d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 1.5c-4.69 0-8.497 3.807-8.497 8.497s3.807 8.498 8.497 8.498 8.498-3.808 8.498-8.498-3.808-8.497-8.498-8.497zm0 7.425 2.717-2.718c.146-.146.339-.219.531-.219.404 0 .75.325.75.75 0 .193-.073.384-.219.531l-2.717 2.717 2.727 2.728c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.384-.073-.53-.219l-2.729-2.728-2.728 2.728c-.146.146-.338.219-.53.219-.401 0-.751-.323-.751-.75 0-.192.073-.384.22-.531l2.728-2.728-2.722-2.722c-.146-.147-.219-.338-.219-.531 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"></path></svg>
+                    </span></button>   
+            </div>
+        </div>
+    </header>
+
+    <video autoplay muted loop rel="preload" id="video" class="video">
+        <source src="Img/Brembo.mp4" type="video/mp4">
+      </video>
+
+    <!-- MAIN 1 -->
+    <main id="main">
+        <div class="container">
+            <div class="nome">
+                <h2 class="nome-secao">Populares</h2>
+            </div>
+
+            <!-- Produtos 1 -->
+            <div class="produtos">
+                
+                <div class="produtos-linha">
+
+                    
+                    <!-- Produto 1 -->
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="Img/Bobinas RS.webp" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>Kit-Bobinas RS Performance</h3>
+                            <p>R$1380.90</p>
+                            <br>
+                            <button class="Btn" onclick="addCarrinho('Kit-Bobinas RS Performance', 1380.90)">Adicionar ao Carrinho
+                               
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 2 -->
+                    <div class= "produto">
+                        <div class="imagem">
+                            <img src="Img/intake K&N.png" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>Intake K&N Plug in Play</h3>
+                            <p>R$299.90</p>
+                            <br>
+                            <button class="Btn" onclick="addCarrinho('Intake K&N Plug in Play', 299.90)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 3 -->
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="Img/KIT-DOPPIO .jpg" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>Kit-Brembo Pinças-Discos-Aeroquip</h3>
+                            <p>R$5790.90</p>
+                            <br>
+                            <button class="Btn" onclick="addCarrinho('Kit-Brembo Pinças-Discos-Aeroquip', 5790.90)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Produtos 2 -->
+            <div class="produtos">
+                <div class="produtos-linha">
+                    
+                    <!-- Produto 4 -->
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="Img/ZR.70.jpg" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>Turbina Autoavionics ZR.70</h3>
+                            <p>R$2700.90</p>
+                            <br>
+                            <button class="Btn" onclick="addCarrinho('Turbina Autoavionics ZR.70', 2700.90)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 5 -->
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="Img/Intercooler.webp" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>Intercooler Metal-Horse Plug in Play</h3>
+                            <p>R$1299.90</p>
+                            <br>
+                            <button class="Btn" onclick="addCarrinho('Intercooler Metal-Horse Plug in Play', 1299.90)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 6 -->
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="Img/abafador.png" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>Abafador Luzian Inox-3 Polegadas</h3>
+                            <p>R$1040.90</p>
+                            <br>
+                            <button class="Btn" onclick="addCarrinho('Abafador Luzian Inox-3 Polegadas', 1040.90)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </main>
+
+       
+    <!-- IMG-FUEL-ART -->
+    <div class="div-fuel-01">
+                <img class="art-fuel" src="Img/fuel-art.png" alt="">
+            </div>
+    
+
+            <!-- MAIN 2 -->
+        <main id="main">
+            <div class="container">
+
+                <!-- LOGO-FUEL -->
+                <div class="div-fuel-02">
+                    <img class="logo-fuel" src="Img/Fuel-tech-logo.png" alt="logo fuel tech">
+                </div>
+
+            <!-- Produtos fuel-tech -->
+            <div class="produtos">
+                
+                <div class="produtos-linha">
+
+                    
+                    <!-- Produto 7 -->
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="Img/FT.450.webp" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>FT 450 Fuel-Tech 450 SFI</h3>
+                            <p>R$3440.00</p>
+                            <br>
+                            <button class="Btn" onclick="addCarrinho('FT 450 Fuel-Tech 450 SFI', 3440.00)">Adicionar ao Carrinho
+                               
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 8 -->
+                    <div class= "produto">
+                        <div class="imagem">
+                            <img src="Img/FT550.png" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>FT 550 Fuel-Tech 550 SFI</h3>
+                            <p>R$6490.00</p>
+                            <br>
+                            <button class="Btn" onclick="addCarrinho('FT 550 Fuel-Tech 550 SFI', 6490.00 )">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+
+                    <!-- Produto 9 -->
+                    <div class="produto">
+                        <div class="imagem">
+                            <img src="Img/FT.600.png" alt="">
+                        </div>
+                        <div class="infos">
+                            <h3>FT 600 Fuel-Tech 600 SFI</h3>
+                            <p>R$10790.00</p>
+                            <br>
+                            <button class="Btn" onclick="addCarrinho('FT 600 Fuel-Tech 600 SFI', 10790.00)">Adicionar ao Carrinho</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+         <div class="container-final">
+
+                <div class="logo-brembo"> 
+                    <a href="AutoExpress.html" > <div class="logo">
+                        <img class="img-logo2" src="Img/logo-autoexpress.png" alt="">
+                        <h1 class="auto2">Auto</h1>
+                        <h1 class="express2">Express</h1>
+                    </div> </a> </div>
+
+                <div class="redes">
+                    <h2 class="nossas-redes" >Nossas Redes</h2>
+
+                    <div class="socials-container">
+                        <a href="https://twitter.com/?lang=pt-br" class="social twitter">
+                          <svg height="1em" viewBox="0 0 512 512">
+                            <path
+                              d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                            ></path>
+                          </svg>
+                        </a>
+                      
+                        <a href="https://m.facebook.com/login/?locale=pt_BR" class="social facebook"
+                          ><svg height="1em" viewBox="0 0 320 512">
+                            <path
+                              d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"> 
+                            </path></svg>
+                        </a>
+                      
+                        <a href="https://myaccount.google.com" class="social google-plus">
+                          <svg height="1em" viewBox="0 0 640 512">
+                            <path
+                              d="M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"
+                            ></path>
+                          </svg>
+                        </a>
+                      
+                        <a href="https://www.instagram.com" class="social instagram">
+                            <svg height="1em" viewBox="0 0 448 512">
+                            <path
+                              d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                            </svg>
+                        </a>
+                      </div></div>
+
+                      <h2 class="contato-titulo" >Entre em contato</h2>
+                      <form class="contato">
+                        <input value="Seu nome:" id="nome-ps" type="text">
+                        <input value="Seu email:" id="email" type="email">
+                        <input value="Assunto:" id="assunto" type="text">
+                        <input value="Mensagem:" id="msg" type="text">
+                        <button class="enviar" >Enviar Mensagem</button>
+                    </form>
+                </div>
+
+    <script src="AutoExpress.js"></script>
+</body>
+</html>
