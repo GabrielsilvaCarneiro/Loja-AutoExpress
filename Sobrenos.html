@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoExpress.com.br</title>
-    <link rel="stylesheet" href="AutoExpress.css">
+    <link rel="stylesheet" href="Sobrenos.css">
 </head>
 <body>
 
@@ -23,12 +23,16 @@
                 <a href="Registrar-se.html" class="item1">Registrar-se</a>
             </nav>
 
-            <div class="buscar">
-                <input type="text" id="buscar-input" placeholder="Pesquisa" oninput="buscarProduto()">
-          
-            </div>
+            
     
-                <div id="carrinho-icon" onclick="toggleCarrinho()" >
+                   <!-- /////////////////////// CARRINHO COMPRAS E BUSCA //////////////////////// -->
+
+                   <!-- <div class="buscar">
+                    <input type="text" id="buscar-input" placeholder="Pesquisa" oninput="buscarProduto()">
+              
+                </div> -->
+
+                <!-- <div id="carrinho-icon" onclick="toggleCarrinho()" >
                 <img src="Img/basket.png" alt="" class="carrinho">
             
                
@@ -39,7 +43,7 @@
                 <ul id="itens-lista"></ul>
                 <span id="preco-total">Total: R$0.00</span>
 
-                 <!-- COMPRAR -->
+                 
                  <div class="botoes-carrinho">
                  <a href="LoginExpress.html">
                  <button id="comprar">
@@ -52,7 +56,10 @@
                     </span>
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-miterlimit="2" stroke-linejoin="round" fill-rule="evenodd" clip-rule="evenodd"><path fill-rule="nonzero" d="m12.002 2.005c5.518 0 9.998 4.48 9.998 9.997 0 5.518-4.48 9.998-9.998 9.998-5.517 0-9.997-4.48-9.997-9.998 0-5.517 4.48-9.997 9.997-9.997zm0 1.5c-4.69 0-8.497 3.807-8.497 8.497s3.807 8.498 8.497 8.498 8.498-3.808 8.498-8.498-3.808-8.497-8.498-8.497zm0 7.425 2.717-2.718c.146-.146.339-.219.531-.219.404 0 .75.325.75.75 0 .193-.073.384-.219.531l-2.717 2.717 2.727 2.728c.147.147.22.339.22.531 0 .427-.349.75-.75.75-.192 0-.384-.073-.53-.219l-2.729-2.728-2.728 2.728c-.146.146-.338.219-.53.219-.401 0-.751-.323-.751-.75 0-.192.073-.384.22-.531l2.728-2.728-2.722-2.722c-.146-.147-.219-.338-.219-.531 0-.425.346-.749.75-.749.192 0 .385.073.531.219z"></path></svg>
-                    </span></button> 
+                    </span></button>  -->
+
+                         <!-- /////////////////////////////////////////////// -->
+
                </div>
             </div>
         </div>
@@ -61,180 +68,13 @@
     <video autoplay muted loop rel="preload" id="video" class="video">
         <source src="Img/Brembo.mp4" type="video/mp4">
       </video>
-
-    <!-- MAIN 1 -->
-    <main id="main">
-        <div class="container1">
-            <div class="nome">
-                <h2 class="nome-secao">Populares</h2>
-            </div>
-
-            <!-- Produtos 1 -->
-            <div class="produtos">
-                
-                <div class="produtos-linha">
-
-                    
-                    <!-- Produto 1 -->
-                    <div class="produto">
-                        <div class="imagem">
-                            <img src="Img/Bobinas RS.webp" alt="">
-                        </div>
-                        <div class="infos">
-                            <h3>Kit-Bobinas RS Performance</h3>
-                            <p>R$1380.90</p>
-                            <br>
-                            <button class="Btn" onclick="addCarrinho('Kit-Bobinas RS Performance', 1380.90)">Adicionar ao Carrinho
-                               
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Produto 2 -->
-                    <div class= "produto">
-                        <div class="imagem">
-                            <img src="Img/intake K&N.png" alt="">
-                        </div>
-                        <div class="infos">
-                            <h3>Intake K&N Plug in Play</h3>
-                            <p>R$299.90</p>
-                            <br>
-                            <button class="Btn" onclick="addCarrinho('Intake K&N Plug in Play', 299.90)">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                    <!-- Produto 3 -->
-                    <div class="produto">
-                        <div class="imagem">
-                            <img src="Img/KIT-DOPPIO .jpg" alt="">
-                        </div>
-                        <div class="infos">
-                            <h3>Kit-Brembo Pinças-Discos-Aeroquip</h3>
-                            <p>R$5790.90</p>
-                            <br>
-                            <button class="Btn" onclick="addCarrinho('Kit-Brembo Pinças-Discos-Aeroquip', 5790.90)">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Produtos 2 -->
-            <div class="produtos">
-                <div class="produtos-linha">
-                    
-                    <!-- Produto 4 -->
-                    <div class="produto">
-                        <div class="imagem">
-                            <img src="Img/ZR.70.jpg" alt="">
-                        </div>
-                        <div class="infos">
-                            <h3>Turbina Autoavionics ZR.70</h3>
-                            <p>R$2700.90</p>
-                            <br>
-                            <button class="Btn" onclick="addCarrinho('Turbina Autoavionics ZR.70', 2700.90)">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                    <!-- Produto 5 -->
-                    <div class="produto">
-                        <div class="imagem">
-                            <img src="Img/Intercooler.webp" alt="">
-                        </div>
-                        <div class="infos">
-                            <h3>Intercooler Metal-Horse Plug in Play</h3>
-                            <p>R$1299.90</p>
-                            <br>
-                            <button class="Btn" onclick="addCarrinho('Intercooler Metal-Horse Plug in Play', 1299.90)">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                    <!-- Produto 6 -->
-                    <div class="produto">
-                        <div class="imagem">
-                            <img src="Img/abafador.png" alt="">
-                        </div>
-                        <div class="infos">
-                            <h3>Abafador Luzian Inox-3 Polegadas</h3>
-                            <p>R$1040.90</p>
-                            <br>
-                            <button class="Btn" onclick="addCarrinho('Abafador Luzian Inox-3 Polegadas', 1040.90)">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-        </div>
-    </main>
-
-       
-    <!-- IMG-FUEL-ART -->
-    <div class="div-fuel-01">
-                <img class="art-fuel" src="Img/fuel-art.png" alt="">
-            </div>
     
+      
 
-            <!-- MAIN 2 -->
-        <main id="main">
-            <div class="container2">
 
-                <!-- LOGO-FUEL -->
-                <div class="div-fuel-02">
-                    <img class="logo-fuel" src="Img/Fuel-tech-logo.png" alt="logo fuel tech">
-                </div>
 
-            <!-- Produtos fuel-tech -->
-            <div class="produtos">
-                
-                <div class="produtos-linha">
 
-                    
-                    <!-- Produto 7 -->
-                    <div class="produto">
-                        <div class="imagem">
-                            <img src="Img/FT.450.webp" alt="">
-                        </div>
-                        <div class="infos">
-                            <h3>FT 450 Fuel-Tech 450 SFI</h3>
-                            <p>R$3440.00</p>
-                            <br>
-                            <button class="Btn" onclick="addCarrinho('FT 450 Fuel-Tech 450 SFI', 3440.00)">Adicionar ao Carrinho
-                               
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Produto 8 -->
-                    <div class= "produto">
-                        <div class="imagem">
-                            <img src="Img/FT550.png" alt="">
-                        </div>
-                        <div class="infos">
-                            <h3>FT 550 Fuel-Tech 550 SFI</h3>
-                            <p>R$6490.00</p>
-                            <br>
-                            <button class="Btn" onclick="addCarrinho('FT 550 Fuel-Tech 550 SFI', 6490.00 )">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                    <!-- Produto 9 -->
-                    <div class="produto">
-                        <div class="imagem">
-                            <img src="Img/FT.600.png" alt="">
-                        </div>
-                        <div class="infos">
-                            <h3>FT 600 Fuel-Tech 600 SFI</h3>
-                            <p>R$10790.00</p>
-                            <br>
-                            <button class="Btn" onclick="addCarrinho('FT 600 Fuel-Tech 600 SFI', 10790.00)">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <div class="container-final">
+      <div class="container-final">
 
         <div class="logo-brembo"> 
             <a href="AutoExpress.html" > <div class="logo">
@@ -270,6 +110,6 @@
 
         </div>
 
-    <script src="AutoExpress.js"></script>
+      <script src="Sobrenos.js"></script>
 </body>
 </html>

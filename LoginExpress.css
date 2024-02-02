@@ -13,14 +13,55 @@ body{
     background-color: rgb(0, 0, 0);
 }
 
-.container{
-    align-items: center;
+ .logo{
+    display: flex;
 }
+
+.container{
+  margin-top: 25px;
+  display: flex;
+}
+
+#header .container{
+    justify-content: space-between;
+    align-items: center;
+    margin-top:  0px
+}
+
+.header{
+  background-color: rgb(0, 0, 0);
+  height: 75px;
+  margin-top: 0px;
+  padding-top: 50px;
+}
+
+.auto{
+  font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white; letter-spacing: 2px; margin-left: 5px; 
+}
+.express{
+  font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(255, 0, 0) ;letter-spacing: 2px;
+
+}
+
+.img-logo{
+  width: 40px; height: auto; display: flex; margin-left: 50px;
+}
+
+.menu{
+  display: flex;
+}
+
+.item1 {
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(255, 255, 255);
+  padding-right: 100px;
+}
+
 
 .form { color: rgb(0, 0, 0);
     display: flex; 
-    margin-top: 25px; 
-    margin-left: 350px;
+    margin-left: 450px;
     flex-direction: column;
     gap: 10px;
     background-color: #ffffff;
@@ -132,58 +173,7 @@ body{
     border: 1px solid #2d79f3;
   }
 
-  .logo{
-    display: flex;
-}
-
-.container{
-    margin: 0 120px;
-    display: flex;
-}
-
-#header .container{
-    justify-content: space-between;
-    align-items: center;
-    margin-top:  0px;
-
-
-}
-
-.header{
-  background-color: rgb(0, 0, 0);
-  height: 100px; max-height: 450px;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0px;
-  padding-top: 40px;
-}
-
-.auto{
-  font-size: 35px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: white; letter-spacing: 2px; margin-left: 5px; margin-top: 10px;
-}
-.express{
-  font-size: 35px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(255, 0, 0) ;letter-spacing: 2px; margin-top: 10px;
-   /* #BE0115;  */
-}
-
-.img-logo{
-width: 55px; height: auto; position: absolute; right: 1380px; margin-top: 10px;
-}
-
-.container1{
-  margin: 0 120px;
-  display: flex;
-}
-
-.menu{
-  display: flex;
-}
-
-.item1 {
-  font: 520 25px 'sans', sans-serif;
-  margin-top: 10px;
-  color: rgb(255, 255, 255);
-  margin-left: 100px;}
+ 
 
 #requisitos{ display: flex; font-size: 12.9px;
 }
